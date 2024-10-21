@@ -4,4 +4,4 @@ This repository contains instructions, scripts, and code templates required to t
 
 Please see the task definitions in the [document](https://github.com/amargaritov/techarena24_playground/blob/main/challenge_guidebook.pdf).
 
-More information about the challenge is available [here](https://huawei.agorize.com/en/challenges/2024-tech-arena-uk).
+More information about the challenge is available [here](https://huawei.agorize.com/en/challenges/techarena-uk2024).
