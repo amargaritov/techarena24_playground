@@ -32,17 +32,17 @@ CXXFLAGS += -fpass-plugin=$(DYN_INSTR_COUNT_DIR)/libDynamicInstructionCounting.s
 
 #-------------------------------------------------------------------
 
-# Main makefile logic to prepare libTask1PredictionAlgorithm.so. 
+# Main makefile logic to prepare libTask2PredictionAlgorithm.so. 
 # This part can be modified if needed. 
 
 SRC_FILES := $(wildcard ./*.cpp)
 OBJ_FILES := $(patsubst ./%.cpp,./%.o,$(SRC_FILES))
 
 all: $(OBJ_FILES) 
-	$(CC) $(LDFLAGS) $^ -shared -o libTask1PredictionAlgorithm.so
+	$(CC) $(LDFLAGS) $^ -shared -o libTask2PredictionAlgorithm.so
 
 ./%.o: ./%.cpp
 	$(CC) -c $(CXXFLAGS) -shared -o $@ $<
 
 clean:
-	rm -rf *.o libTask1PredictionAlgorithm.so 
+	rm -rf *.o libTask2PredictionAlgorithm.so 
