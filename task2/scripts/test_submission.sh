@@ -46,5 +46,14 @@ $TECHARENA24_TASK2_DIR/task2/scripts/build.sh > build.log
 echo "Building has finished. Log is available in $(pwd)/build.log"
 
 echo "Evaluating the submission..."
-$TECHARENA24_TASK2_DIR/task2/scripts/evaluate.sh -r routes/route.txt > result.log 
+#this is the required atlas filename
+if [ -f "$TECHARENA24_TASK2_DIR/task2/PredictionAlgorithm/atlas_route.txt" ]; then
+    $TECHARENA24_TASK2_DIR/task2/scripts/evaluate.sh -r PredictionAlgorithm/atlas_route.txt > result.log
+#this atlas filename is acceptable too
+elif [ -f "$TECHARENA24_TASK2_DIR/task2/PredictionAlgorithm/route.txt" ]; then
+    $TECHARENA24_TASK2_DIR/task2/scripts/evaluate.sh -r PredictionAlgorithm/route.txt > result.log
+#default option
+else
+    $TECHARENA24_TASK2_DIR/task2/scripts/evaluate.sh -r routes/route.txt > result.log
+fi
 echo "Evaluation has finished. Log is available in $(pwd)/result.log"
