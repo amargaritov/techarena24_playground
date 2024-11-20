@@ -15,4 +15,4 @@ source source.sh
 
 6. To prepare a submission, place all required files into a directory. 
 The submission directory must include C/C++ source files and Makefile(s) required to build your solution. Then, create an archive out of the submission directory. The resulting submission archive should be uploaded to the challenge platform for evaluation. A submission archive can be created using the following command:
-tar -czvf <archive_name.tar.gz> <your submission directory>
+tar -czvf <archive_name.tar.gz> <your_submission_directory>
