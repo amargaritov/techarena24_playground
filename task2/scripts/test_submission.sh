@@ -42,7 +42,7 @@ fi
 mkdir -p $TECHARENA24_TASK2_DIR/task2/PredictionAlgorithm && tar --strip-components 1 -xvf $INPUT_TAR -C $TECHARENA24_TASK2_DIR/task2/PredictionAlgorithm
 
 echo "Building the submission..."
-$TECHARENA24_TASK2_DIR/task2/scripts/build.sh > build.log
+$TECHARENA24_TASK2_DIR/task2/scripts/build.sh > build.log 2>&1
 echo "Building has finished. Log is available in $(pwd)/build.log"
 
 echo "Evaluating the submission..."
